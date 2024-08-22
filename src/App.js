@@ -1,8 +1,8 @@
+import Routes from "./Routes";
+
 function App() {
   return (
-    <div className="bg-slate-700">
-     Hello
-    </div>
+    <Routes />
   );
 }
 
