@@ -2,7 +2,9 @@ import Routes from "./Routes";
 
 function App() {
   return (
-    <Routes />
+    <div className="bg-gray-300">
+      <Routes />
+    </div>
   );
 }
 
