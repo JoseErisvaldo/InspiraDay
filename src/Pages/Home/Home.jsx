@@ -46,20 +46,20 @@ export default function Home() {
         Comece seu dia com motivação e inspiração. Explore as postagens e encontre sua dose diária de positividade.
       </p>
       <div className="flex flex-1 gap-4 ">
-        <div className="w-[15rem] flex flex-col h-[calc(100vh-15rem)]">
+        <div className="hidden sm:block w-[15rem] flex flex-col h-[calc(100vh-15rem)]">
           <ProfileInfoCard/>
           
         </div>
         <div style={{
           scrollbarWidth: 'none'
-        }} className=" w-full h-[calc(100vh-15rem)] overflow-scroll ">
+        }} className=" w-full h-[calc(100vh-15rem)] overflow-scroll rounded-3xl ">
           <div className="bg-slate-50">
               {posts.map(post => (
               <PostCard  key={post.id} post={post}  />
               ))}
           </div>
         </div>
-        <div className="w-96">
+        <div className="w-96 hidden lg:block">
           <div>
             <h3 className="flex justify-between items-center font-semibold">Sugestões para você <span>Ver tudo</span></h3>
           </div>
