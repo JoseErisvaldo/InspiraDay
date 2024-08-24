@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
 import PostCard from "../../Components/Post/PostCard";
 import ProfileInfoCard from "../../Components/Profile/ProfileInfoCard";
 import SuggestedProfiles from "../../Components/SuggestedProfiles/SuggestedProfiles";
 import Container from "../../Components/UX/Container/Container";
+import Button from "../../Components/UX/Button/Button";
+import CardPost from "../../Components/Post/CardPost";
 
 const posts = [
   { id: 1, profileName: "João Inspirador", profilePhoto: "https://via.placeholder.com/150", title: "Acredite em Si Mesmo", content: "Acredite em si mesmo e tudo será possível.", tags: ["autoestima", "confiança", "motivação"], date: "2024-08-22T08:00:00Z" },
@@ -46,19 +49,19 @@ export default function Home() {
         Comece seu dia com motivação e inspiração. Explore as postagens e encontre sua dose diária de positividade.
       </p>
       <div className="flex flex-1 gap-4 ">
-        <div className="hidden sm:block w-[15rem] flex flex-col h-[calc(100vh-15rem)]">
-          <ProfileInfoCard/>
-          
+        <div className="hidden sm:block w-[15rem] h-[calc(100vh-15rem)]">
+          <ProfileInfoCard/> 
+          <Link to="/perfil" className="flex justify-center items-center">
+            <Button text="Ver perfil" background="#0084ff" color="#fff" />
+          </Link>
         </div>
-        <div style={{
-          scrollbarWidth: 'none'
-        }} className=" w-full h-[calc(100vh-15rem)] overflow-scroll rounded-3xl ">
-          <div className="bg-slate-50">
-              {posts.map(post => (
+        <CardPost >
+          <div className="">
+            {posts.map(post => (
               <PostCard  key={post.id} post={post}  />
-              ))}
+            ))}
           </div>
-        </div>
+        </CardPost>
         <div className="w-96 hidden lg:block">
           <div>
             <h3 className="flex justify-between items-center font-semibold">Sugestões para você <span>Ver tudo</span></h3>

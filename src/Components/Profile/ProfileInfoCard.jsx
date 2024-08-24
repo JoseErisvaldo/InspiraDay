@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../UX/Button/Button';
 import jose from './jose.png'
+import { Link } from 'react-router-dom';
 
 export default function ProfileInfoCard () {
   return (
@@ -17,9 +18,6 @@ export default function ProfileInfoCard () {
             <p>Seguindo</p>
             <p>0</p>
           </span>
-        </div>
-        <div>
-          <Button text="Ver perfil" background="#0084ff" color="#fff" />
         </div>
       </div>
     </div>
