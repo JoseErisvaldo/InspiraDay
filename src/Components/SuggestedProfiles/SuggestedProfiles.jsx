@@ -6,7 +6,7 @@ export default function SuggestedProfiles ({followSuggestions}) {
     <div>
       {followSuggestions.map((follow) => (
         <div className="flex gap-2 justify-between p-2">
-          <Link to={`/profile/${follow.id}`} className="flex gap-2 items-center">
+          <Link to={`/perfil/${follow.id}`} className="flex gap-2 items-center">
             <div className="flex gap-2 items-center">
               <img src={follow.photo} alt="" className="w-10 rounded-full" /> 
               <div>{follow.name}</div>

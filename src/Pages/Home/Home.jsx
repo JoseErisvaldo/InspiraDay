@@ -20,7 +20,7 @@ export default function Home() {
       </p>
       <div className="flex flex-1 gap-4 ">
         <div className="hidden sm:block w-[15rem] h-[calc(100vh-15rem)]">
-          <ProfileInfoCard/> 
+          <ProfileInfoCard profile={'2'}/> 
           <Link to="/perfil" className="flex justify-center items-center">
             <Button text="Ver perfil" background="#0084ff" color="#fff" />
           </Link>
