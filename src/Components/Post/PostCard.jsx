@@ -1,13 +1,16 @@
 import { FaRegComment, FaRegHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 export default function PostCard({ post }) {
   return (
     <div className="p-4 mb-4 bg-slate-50">
-      <div className="flex items-center mb-2 gap-2">
-        <img src={post.profilePhoto} alt={post.profileName} className="w-10 h-10 rounded-full" />
-        <h2 className="text-xl font-bold mb-2">{post.profileName}</h2>
-      </div>
+      <Link to={`/perfil/${post.id}`} className="flex items-center gap-3">
+        <div className="flex items-center mb-2 gap-2">
+          <img src={post.profilePhoto} alt={post.profileName} className="w-10 h-10 rounded-full" />
+          <h2 className="text-xl font-bold mb-2">{post.profileName}</h2>
+        </div>
+      </Link>
       <div className="font-semibold">{post.title}</div>
       <p>{post.content}</p>
       {post.tags.map((tag, index) => (
