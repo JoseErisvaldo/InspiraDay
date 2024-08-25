@@ -7,15 +7,15 @@ import Button from "../../Components/UX/Button/Button";
 import CardPost from "../../Components/Post/CardPost";
 import { usePosts } from "../../Components/Hooks/usePosts";
 import { useFollowSuggestions } from "../../Components/Hooks/useFollowSuggestions";
-import ButtonPost from "../../Components/UX/ButtonPost/ButtonPost";
-import { IoIosAddCircleOutline } from "react-icons/io";
-import Modal from "../../Components/UX/Modal/Modal";
 import ModalPost from "../../Components/Post/ModalPost";
+import useProfiles from "../../Components/Hooks/useProfiles";
+
 
 export default function Home() {  
   const { posts } = usePosts(); 
   const { followSuggestions } = useFollowSuggestions();
-
+  const { profiles } = useProfiles()
+    console.log(profiles)
   function handlePost(e) {
     e.preventDefault();
     console.log("Post!");
@@ -31,7 +31,7 @@ export default function Home() {
       <div className="flex flex-1 gap-4 ">
         <div className="hidden sm:block w-[15rem] h-[calc(100vh-15rem)]">
           <ProfileInfoCard profile={'2'}/> 
-          <Link to="/perfil" className="flex justify-center items-center">
+          <Link to="/perfil/908c71b4-ddc6-4e54-8b00-faf63139d439" className="flex justify-center items-center">
             <Button text="Ver perfil" background="#0084ff" color="#fff" />
           </Link>
         </div>
