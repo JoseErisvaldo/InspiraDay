@@ -22,7 +22,7 @@ export default function Profile() {
         <Link to={'/'} className="text-2xl mb-3">
           <SlArrowLeft />
         </Link>
-        <div className=" sm:w-3/5 sm:grid sm:grid-cols-2 m-auto bg-gray-50 p-4 rounded-3xl">
+        <div className=" flex flex-col justify-center items-center gap-5 sm:w-3/6 sm:grid sm:grid-cols-2 m-auto bg-gray-50 p-4 rounded-3xl">
           <div className="flex flex-col justify-center items-center gap-4">
             <ProfileInfoCard profile={profile} />
             <div>
