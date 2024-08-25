@@ -9,6 +9,8 @@ import { usePosts } from "../../Components/Hooks/usePosts";
 import { useFollowSuggestions } from "../../Components/Hooks/useFollowSuggestions";
 import ButtonPost from "../../Components/UX/ButtonPost/ButtonPost";
 import { IoIosAddCircleOutline } from "react-icons/io";
+import Modal from "../../Components/UX/Modal/Modal";
+import ModalPost from "../../Components/Post/ModalPost";
 
 export default function Home() {  
   const { posts } = usePosts(); 
@@ -20,13 +22,12 @@ export default function Home() {
   }
   return (
     <Container>
+      
       <h1 className="text-4xl font-bold mb-4">Olá, José Erisvaldo!</h1>
       <p className="text-gray-700 mb-4">
         Comece seu dia com motivação e inspiração. Explore as postagens e encontre sua dose diária de positividade.
       </p>
-      <div className="flex flex-col md:flex-row gap-4">
-        <ButtonPost onClick={handlePost} icon={<IoIosAddCircleOutline />} text={'Criar postagem'} background="#0084ff" color="#fff" />
-      </div>
+      <ModalPost />
       <div className="flex flex-1 gap-4 ">
         <div className="hidden sm:block w-[15rem] h-[calc(100vh-15rem)]">
           <ProfileInfoCard profile={'2'}/> 
